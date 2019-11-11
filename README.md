@@ -15,8 +15,8 @@ Step 2: Run the installation script:
 $ cd asf-insar-singularity 
 $ bash ./apt-insar-install.sh
 ```
-Note: The container will be installed in /projects/$USER/containers by default.
-      You can change the INSTALL_DIR variable in the script if you want it
+Note: The container will be installed in `/projects/$USER/containers` by default.
+      You can change the `INSTALL_DIR` variable in the script if you want it
       somewhere else.
 
 ----------------------------------
@@ -40,5 +40,6 @@ $ /projects/$USER/containers//apt-insar --reference-granule REFERENCE_GRANULE --
         SRTM uses the ISCE default settings. |
 
 For example:
-
+```
 $ /projects/$USER/containers//apt-insar --reference-granule S1A_IW_SLC__1SDV_20190716T135159_20190716T135226_028143_032DC3_512B --secondary-granule S1A_IW_SLC__1SDV_20190704T135158_20190704T135225_027968_032877_1C4D --username janedoe --password 1loveNASA!
+```
