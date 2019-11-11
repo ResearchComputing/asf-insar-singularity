@@ -12,7 +12,7 @@ $ git clone https://github.com/ResearchComputing/asf-insar-singularity.git
 
 Step 2: Run the installation script:
 
-$ bash ./asf-insar-install.sh
+$ bash ./apt-insar-install.sh
 
 Note: The container will be installed in /projects/$USER/containers by default.
       You can change the INSTALL_DIR variable in the script if you want it
