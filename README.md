@@ -7,14 +7,14 @@ To install the apt-insar docker container on Summit:
 
 Step 1: Login to a Summit 'scompile' node and download this github
         repository to any directory you want, as follows:
-
+```
 $ git clone https://github.com/ResearchComputing/asf-insar-singularity.git
-
+```
 Step 2: Run the installation script:
-
+```
 $ cd asf-insar-singularity 
 $ bash ./apt-insar-install.sh
-
+```
 Note: The container will be installed in /projects/$USER/containers by default.
       You can change the INSTALL_DIR variable in the script if you want it
       somewhere else.
