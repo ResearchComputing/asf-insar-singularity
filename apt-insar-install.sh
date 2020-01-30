@@ -78,5 +78,5 @@ else
  echo '        SRTM uses the ISCE default settings. |'
  echo ""
  echo "For example"
- echo '$' $INSTALL_DIR/apt-insar --reference-granule S1A_IW_SLC__1SDV_20190716T135159_20190716T135226_028143_032DC3_512B --secondary-granule S1A_IW_SLC__1SDV_20190704T135158_20190704T135225_027968_032877_1C4D --username $USER --password 1loveNASA!
+ echo '$' $INSTALL_DIR/apt-insar --reference-granule S1A_IW_SLC__1SDV_20190716T135159_20190716T135226_028143_032DC3_512B --secondary-granule S1A_IW_SLC__1SDV_20190704T135158_20190704T135225_027968_032877_1C4D --username janedoe --password 1loveNASA!
 fi
