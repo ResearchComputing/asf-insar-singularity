@@ -1,7 +1,12 @@
+## APT-INSAR on RMACC Summit
+
 This repository contains a bash script that will install
 The "apt-insar" Docker container maintained by the
 Alaska SAR Facility on Summit, such that it can be used
 with the Singularity containerization software.
+
+----------------------------------
+### Installation
 
 To install the apt-insar docker container on Summit:
 
@@ -22,6 +27,7 @@ Note: The container will be installed in `/projects/$USER/containers` by default
       somewhere else.
 
 ----------------------------------
+### Usage
 
 To use the ASF apt-insar Docker container on Summit, use this command in your job script:
 
@@ -60,4 +66,4 @@ export EARTHDATA_PASS=1Lov3NASA!
 A sample job script called `run-apt-insar-job.sh` can be found in your `/projects/$USER/containers` directory. You can edit this script to suit your workflow and submit jobs to Summit as follows:
 `sbatch run-apt-insar-job.sh`
 
-Note that the job script is presently configured to use one core (`--ntasks=1`). Each core on the Summit `shas` partition is associated with 4.48 GB RAM.  If your job crashes because it has insufficient memory, you can increase the number of cores (e.g., `--ntasks=2` will give you 9.96 GB of RAM).
+Note that the job script is presently configured to use one core (`--ntasks=1`). Each core on the Summit `shas` partition is associated with 4.48 GB RAM.  If your job crashes because it has insufficient memory, you can increase the number of cores (e.g., setting `--ntasks=2` will give you 9.96 GB of RAM).
