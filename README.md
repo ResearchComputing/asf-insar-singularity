@@ -13,14 +13,14 @@ To install the apt-insar docker container on Summit:
 Step 1: Login to a Summit 'scompile' node and download this github
         repository to any directory you want, as follows:
 ```
-$ git clone https://github.com/ResearchComputing/asf-insar-singularity.git
+git clone https://github.com/ResearchComputing/asf-insar-singularity.git
 ```
 Step 2: Run the installation script:
 ```
-$ cd asf-insar-singularity 
-$ bash ./apt-insar-install.sh
-$ cd ../ 
-$ rmdir asf-insar-singularity
+cd asf-insar-singularity 
+bash ./apt-insar-install.sh
+cd ../ 
+rmdir asf-insar-singularity
 ```
 Note: The container will be installed in `/projects/$USER/containers` by default.
       You can change the `INSTALL_DIR` variable in the script if you want it
@@ -28,8 +28,8 @@ Note: The container will be installed in `/projects/$USER/containers` by default
 
 Step 3: Ensure everything was installed:
 ```
-$ cd /projects/$USER/containers
-$ ls
+cd /projects/$USER/containers
+ls
 ```
 You should see four files:
 `apt-insar  apt-insar.sif  commands.sh  run-apt-insar-job.sh`
@@ -44,7 +44,7 @@ You should see four files:
 
 To use the ASF apt-insar Docker container on Summit, use this command in your job script:
 
-`$ /projects/$USER/containers/apt-insar --reference-granule REFERENCE_GRANULE --secondary-granule SECONDARY_GRANULE [--username USERNAME] [--password PASSWORD] [--dem {ASF,SRTM}]`
+`/projects/$USER/containers/apt-insar --reference-granule REFERENCE_GRANULE --secondary-granule SECONDARY_GRANULE [--username USERNAME] [--password PASSWORD] [--dem {ASF,SRTM}]`
 
 | Option | Description |
 
@@ -63,7 +63,7 @@ To use the ASF apt-insar Docker container on Summit, use this command in your jo
 For example _[note that the "`\`" merges lines]_:
 
 ```
-$ /projects/$USER/containers/apt-insar \
+/projects/$USER/containers/apt-insar \
 --reference-granule S1A_IW_SLC__1SDV_20190716T135159_20190716T135226_028143_032DC3_512B \
 --secondary-granule S1A_IW_SLC__1SDV_20190704T135158_20190704T135225_027968_032877_1C4D \
 --username $EARTHDATA_USER \
