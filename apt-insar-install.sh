@@ -20,6 +20,11 @@ if [ ! -f "$INSTALL_DIR/apt-insar.sif" ]; then
  echo ""
  echo "container does not exist; creating one in $INSTALL_DIR"
  mkdir -p $INSTALL_DIR
+ echo ""
+ echo "copying sample job script to $INSTALL_DIR"
+ cp run-apt-insar-job.sh $INSTALL_DIR
+ echo ""
+ echo "installing container"
  cd $INSTALL_DIR
  singularity pull --name apt-insar.sif docker://asfdaac/apt-insar
  echo "Done creating container in $INSTALL_DIR"
