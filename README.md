@@ -14,6 +14,7 @@ Step 2: Run the installation script:
 ```
 $ cd asf-insar-singularity 
 $ bash ./apt-insar-install.sh
+$ cd ../ ; rm -Rf asf-insar-singularity
 ```
 Note: The container will be installed in `/projects/$USER/containers` by default.
       You can change the `INSTALL_DIR` variable in the script if you want it
@@ -21,7 +22,7 @@ Note: The container will be installed in `/projects/$USER/containers` by default
 
 ----------------------------------
 
-To use the ASF apt-insar Docker container on Summit:
+To use the ASF apt-insar Docker container on Summit, use this command in your job script:
 
 `$ /projects/$USER/containers/apt-insar --reference-granule REFERENCE_GRANULE --secondary-granule SECONDARY_GRANULE [--username USERNAME] [--password PASSWORD] [--dem {ASF,SRTM}]`
 
@@ -39,7 +40,7 @@ To use the ASF apt-insar Docker container on Summit:
         ASF automatically selects the best geoid-corrected NED/SRTM DEM.
         SRTM uses the ISCE default settings. |
 
-For example (the "\" merges lines):
+For example (the "`\`" merges lines):
 
 `$ /projects/$USER/containers/apt-insar \
 --reference-granule S1A_IW_SLC__1SDV_20190716T135159_20190716T135226_028143_032DC3_512B \
