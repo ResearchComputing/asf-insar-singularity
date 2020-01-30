@@ -26,6 +26,19 @@ Note: The container will be installed in `/projects/$USER/containers` by default
       You can change the `INSTALL_DIR` variable in the script if you want it
       somewhere else.
 
+Step 3: Ensure everything was installed:
+```
+$ cd /projects/$USER/containers
+$ ls
+```
+You should see four files:
+`apt-insar  apt-insar.sif  commands.sh  run-apt-insar-job.sh`
+
+* `apt-insar`: the "wrapper script" that you invoke to run the container
+* `apt-insar.sif`: the container (_sif_="Singularity Image Format")
+* `commands.sh`: the script invoked _by_ the container when you run `apt-insar`
+* `run-apt-insar-job.sh`: an example job script for running the container on Summit (additional details below).
+
 ----------------------------------
 ### Usage
 
